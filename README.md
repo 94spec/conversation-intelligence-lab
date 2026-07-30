@@ -3,19 +3,15 @@
 [![tests](https://github.com/94spec/conversation-intelligence-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/94spec/conversation-intelligence-lab/actions/workflows/tests.yml)
 [![release](https://img.shields.io/github/v/release/94spec/conversation-intelligence-lab)](https://github.com/94spec/conversation-intelligence-lab/releases/latest)
 
+**RU.** Аналитика на структурированных выходах модели: строгий контракт, проверка противоречий, трассируемые агрегаты и воспроизводимый отчёт. Подробности о production-системах, из которых это выросло: [94spec.github.io](https://94spec.github.io/).
+
 Reference implementation for turning deal-level conversation signals into traceable sales
 analysis. It validates structured LLM outputs, aggregates complete conversation sequences, and
 builds evidence-linked monthly reports from deterministic fixtures.
 
-**What this repository is.** A clean-room implementation of the analysis method I use in
-production, written from scratch on synthetic data. It contains no employer code, transcripts,
-prompts or configuration — the `SYN-` identifier prefix is enforced by the validator precisely
-so that a real deal id cannot enter this repository by accident. What it does carry is the
-part that matters: explicit denominators, a strict output contract, contradiction checks, and
-a report where every aggregate can be traced back to the records behind it.
+Runs on synthetic data with no API key and no third-party runtime dependencies. The `SYN-` identifier prefix is enforced by the validator, so the records stay synthetic by construction.
 
-The same method applied to real commercial data is described, without confidential figures,
-at [94spec.github.io/#analytics](https://94spec.github.io/#analytics).
+The same method on real commercial data: [94spec.github.io/#analytics](https://94spec.github.io/#analytics).
 
 ## What it shows
 

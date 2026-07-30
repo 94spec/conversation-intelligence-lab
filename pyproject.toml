@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conversation-intelligence-lab"
+version = "1.0.0"
+description = "Traceable deal-level conversation analytics on synthetic data"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Дмитрий Пром" }]
+dependencies = []
+
+[project.scripts]
+ci-lab = "ci_lab.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

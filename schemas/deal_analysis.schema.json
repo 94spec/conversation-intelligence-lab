@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DealAnalysis",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "deal_id",
+    "month",
+    "customer_need",
+    "readiness",
+    "purchase_status",
+    "objections",
+    "objection_handling",
+    "competitor_mentioned",
+    "next_step"
+  ],
+  "properties": {
+    "deal_id": {
+      "type": "string",
+      "pattern": "^SYN-[0-9]{3}$"
+    },
+    "month": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-(03|04|05)$"
+    },
+    "customer_need": {
+      "enum": [
+        "career_change",
+        "career_growth",
+        "income_growth",
+        "remote_work",
+        "exploration"
+      ]
+    },
+    "readiness": {
+      "enum": ["high", "medium", "low"]
+    },
+    "purchase_status": {
+      "enum": ["buying", "next_step", "exploring", "refused"]
+    },
+    "objections": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": ["price", "time", "trust", "needs_comparison"]
+      }
+    },
+    "objection_handling": {
+      "enum": ["full", "partial", "not_handled", "not_applicable"]
+    },
+    "competitor_mentioned": {
+      "type": "boolean"
+    },
+    "next_step": {
+      "type": "boolean"
+    }
+  }
+}
